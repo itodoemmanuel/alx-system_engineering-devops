@@ -1,2 +1,2 @@
-chmod u+x #!/bin/bash
-chmod u+x pwd
+#!/bin/bash
+pwd
