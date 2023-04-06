@@ -40,11 +40,11 @@ frontend itodoei.tech-http-frontend
         bind     *:80
         redirect scheme https code 301 if !{ ssl_fc }
         http-request set-header X-Forwarded-Proto http
-        default_backend  nwabueze.tech-backend
+        default_backend  itodoei.tech-backend
 frontend b3zaleel-alx.tech-https-frontend
         bind *:443 ssl crt /etc/letsencrypt/live/www.itodoei.tech/fullchain.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend nwabueze.tech-backend
+        default_backend itodoei.tech-backend
 backend itodoei.tech-backend
         balance roundrobin
         server 17272-web-01 54.242.188.169:80 check
